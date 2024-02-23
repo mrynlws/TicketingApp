@@ -4,7 +4,6 @@ import ProgressDisplay from "./ProgressDisplay";
 import StatusDisplay from "./StatusDisplay";
 
 const TicketCard = ({ ticket }) => {
-
   const formatTimestamp = (timestamp) => {
     const options = {
       year: "numeric",
@@ -26,7 +25,7 @@ const TicketCard = ({ ticket }) => {
       <div className="flex mb-3">
         <PriorityDisplay priority={ticket.priority} />
         <div className="ml-auto">
-          <DeleteBlock />
+          <DeleteBlock id={ticket._id} />
         </div>
       </div>
       <h4>{ticket.title}</h4>
